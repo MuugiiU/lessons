@@ -44,10 +44,12 @@
 {
     top: 0;
     left: 400px;
+    border-radius: 0;
+    
 }
 .shadow:hover .ball3
 {
     top: 400px;
     left: 400px;
-    
+   
 }
