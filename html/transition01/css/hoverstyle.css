@@ -1,0 +1,53 @@
+.shadow
+{
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+    margin: auto;
+    position: relative;
+}
+
+.ball
+{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border-radius: 50%;
+    transition-property: top, left, border-radius;
+    transition-duration: 2s, 1s, 2s;
+    transition-delay: 0s, 0s,1s;
+
+}
+.ball1
+{
+    background-color: aqua;
+    z-index: 1000;
+}
+.ball2
+{
+    background-color: blueviolet;
+    z-index: 900;
+}
+.ball3
+{
+    background-color: brown;
+    z-index: 800;
+}
+.shadow:hover .ball1
+{
+    top: 0;
+    left: 0;
+}
+.shadow:hover .ball2
+{
+    top: 0;
+    left: 400px;
+}
+.shadow:hover .ball3
+{
+    top: 400px;
+    left: 400px;
+    
+}

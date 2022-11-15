@@ -1,0 +1,24 @@
+.col1
+{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: 2s width 1s linear;
+} 
+.col1:hover
+{
+    width: 300px;
+   
+}
+.col2
+{
+    width: 100px;
+    height: 100px;
+    background-color:blueviolet;
+    transition:  width 2s;
+ 
+}
+.col2:hover
+{
+    width: 300px;
+}
