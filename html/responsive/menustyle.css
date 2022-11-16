@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    width: 100vw;
+    overflow: hidden;
+}
+.container 
+{
+    display: flex;
+    overflow: hidden;
+    flex-direction:column ;
+
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    font-weight: 800;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: orange;
+}
+.nav ul
+{
+    display: flex;
+}
+.nav li {
+    margin-left: 20px;
+}
+.nav li a 
+{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+ul li a:hover{
+    color: blueviolet;
+}
+input[type="checkbox"]
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+}
+.icon
+{
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+.navbar
+{
+    overflow: hidden;
+    display: flex;
+}
+/* mobile screen */
+@media screen and(max-width:480px) 
+{
+ body{
+    background-color: red;
+ }    
+}
+/* ipad */
+@media screen and (min-width:481px) and (max-width:768px) 
+{
+ body{
+    background-color: salmon;
+ }    
+ .icon
+ {
+    display: block;
+ }
+}
+.menu-wrap
+{
+    right: -200px;
+    position: absolute;
+    top: 80px;
+    width: 200px;
+    background-color: rgb(30, 146,49);
+    height: calc(100vh-80px);
+    transition-property: all;
+    transition-duration: 1s;
+
+}
+input[type="ckeckbox"]:checked .icon
+{
+    color: blueviolet;
+}
+input[type="checkbox"]:checked .menu-wrap{
+    right: 0;
+    transition-property: right;
+    transition-duration: 1s;
+}
+ul 
+{
+    flex-direction: column;
+}
+ul li {
+    margin: 10px auto;
+}
+/* Desktop screen */
+@media screen and (min-width:1025px) and (max-width:1200px){
+    body{
+        background-color: violet;
+    }
+}

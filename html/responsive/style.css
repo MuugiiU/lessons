@@ -1,0 +1,62 @@
+
+h1 {
+    display: none;
+}
+ /* mobile display */
+@media  screen and (max-width:480px) 
+{
+
+    body{
+        background-color: yellow;
+    }
+
+   #mobile h1
+   {
+    display: block;
+    text-align: center;
+   }
+}
+/* ipad and table */
+@media  screen and (min-width: 481px) and (max-width: 768px)
+ {
+    body{
+        background-color: aqua;
+    }  
+    #table h1{
+        display: inline;
+        text-align: center;
+      } 
+}
+/* laptop */
+@media  screen and (min-width: 781px) and (max-width: 1024px)
+ {
+    body{
+        background-color: teal;
+    }
+
+    #laptop h1{
+        display: inline;
+        text-align: center;
+      } 
+
+    
+}
+/* desktop */
+@media  screen and (min-width:1025px) and (max-width: 1200px)
+ {
+    body{
+        background-color: orange;
+    }
+  #desktop h1{
+    display: inline;
+    text-align: center;
+}
+ }
+ /* large desktop */
+ @media screen and (min-width:1201px)
+ {
+   body{
+    background-color: brown;
+   }   
+   
+ }
