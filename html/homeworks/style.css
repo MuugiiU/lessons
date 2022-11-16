@@ -90,10 +90,7 @@ input {
 {
     color: white;
 }
-input1:: 
-{
-    border-bottom:2px solid white ;
-}
+
 .area
 {
     display: flex;
