@@ -2,9 +2,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-@media screen and (min-width:640px) 
-{
-    
+ 
 
 .row1
 {
@@ -17,16 +15,18 @@
 .column2
 {
     max-width: 100% ;
+
 }
 .container
 {
     display: flex;
     margin: auto;
     padding: 20px 20px 20px 20px;
-}
-.card {
     flex-direction: row;
 }
+/* .card {
+    
+} */
 .card-reverse {
     flex-direction: row-reverse;
 }
@@ -67,7 +67,11 @@ p
 {
     letter-spacing: 2px;
 }
-}
+ @media screen and(min-width:640px) {
+    .row1{
+        display: flex;
+    }
+} 
 @media screen and (max-width:639px)
 {
     .card {
@@ -75,7 +79,17 @@ p
     }
     .card-reverse {
         flex-direction: column-reverse;
+    .container
+    {
         flex-wrap: wrap;
+
+    }
+    .container .card-desc, .container .card-img
+    {
+        flex-basis: 100%;
+    }
+    .card-img {
+        height: 300px;
     }
     .card-img
     {
