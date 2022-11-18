@@ -74,7 +74,13 @@ p
         flex-direction: column;
     }
     .card-reverse {
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
         flex-wrap: wrap;
+    }
+    .card-img
+    {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
     }
 }
