@@ -1,0 +1,6 @@
+*{box-sizing: border-box;}
+body{
+    background-image: url(./1.avif) center / cover gray;
+    box-shadow:inset 0px 10px 20px pink;
+    color: white;
+}
