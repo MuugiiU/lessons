@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media</title>
+    <link rel="stylesheet" href="./css/social-media.css">
 </head>
+
 <body>
-    <h1> Social media хэрэглэгчийн судалгаа</h1>
+    <div class="container">
+        <h1> Social media хэрэглэгчийн судалгаа</h1>
+        <p> Судалгаанд оролцсон таньд баярлалаа.</p>
+        <div class="header">
+
+            <form action="">
+                <fieldset>
+                    <legend><h3>Ерөнхий Мэдээлэл</h3></legend>
+                    <div class="name">
+                        <label for="t">Hэр</label><br>
+                        <input required id="t" placeholder="Нэр">
+                    </div>
+                    <div class="email">
+                        <label for="email">И-мэйл</label><br>
+                        <input required id="email" placeholder="И-мэйл">
+                    </div>
+                    <div class="years">
+                        <label for="number">Нас</label><br>
+                        <input type="number" min="14" max="99" placeholder="Нас">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="information">
+            <form action="">
+            <fieldset>
+             <legend><h3>Social media</h3></legend>
+                <div class="tsag">
+                    <label for="tsag"> Та өдөрт хэдэн цаг social media ашигладаг вэ?</label><br>
+                    <select name="tsag" id="tsag">
+                        <option value="1-2цаг" placeholder="1-2цаг ">1-2цаг</option>
+                        <option value="2-3цаг" placeholder="2-3цаг ">2-3цаг</option>
+                        <option value="зав гарсан үедээ" placeholder="зав гарсан үедээ ">зав гарсан үедээ</option>
+                        <option value="байнга" placrholder="байнга">байнга</option>
+                        <option value="Бусад" placrholder="бусад">бусад</option>
+
+                    </select>
+                </div>
+                <div class="radio">
+                    <h3>Та онлайнаар худалдан авалт хийх, дэлгүүр орж худалдан авалт хийхийн альныг илүүд үздэг вэ</h3>
+                    <br>
+                    <br><input type="radio" id="1" name="songolt" value="Онлайн худалдан авалт">Онлайн худалдан авалт<br>
+                    <br><input type="radio" id="2" name="songolt" value="Дэлгүүр орж худалдан авалт хийх">Дэлгүүр орж худалдан авалт хийх<br>
+                </div>
+                <div class="check">
+                    <h3>Та ямар social media platform ашигладаг вэ? </h3>
+
+                    <label class="checkbox">Facebook
+                        <input type="checkbox" >
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Instagram
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Twitter
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Reddit
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Snapchat
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Quara
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Youtube
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                    <label class="checkbox">Бусад
+                        <input type="checkbox">
+                        <span class="checkmark"></span></label><br>
+                  </div>
+                </fieldset>
+            </form>
+        </div>
+  <div class="footer">
+    <h3>Санал хүсэлт</h3>
+    <textarea name="desctiption" id="desc" cols="30" rows="10" placeholder="Санал хүсэлтээ оруулна уу"></textarea>
+    <input type="submit" value="Илгээх">
+
+  </div>
+
+
+    </div>
 </body>
+
 </html>
