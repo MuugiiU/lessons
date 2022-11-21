@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+input[type="checkbox"] .chechbox +label
+{
+    display: flex;
+}
+input[type=checkbox] .chechbox+label::before{
+    content: "";
+    width: 2em;
+    height: 1em;
+    background-color: blueviolet;
+}
+input[type="checkbox"] .chechbox:checked +label{
+    color: azure;
+}
