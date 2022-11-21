@@ -32,7 +32,7 @@ p {
 
 .header {
     background-color: purple;
-    opacity: 0.4;
+    opacity: 0.7;
     border-radius: 10px;
     max-width: 75%;
     padding: 30px;
@@ -69,16 +69,26 @@ h3
     display: block;
 
 }
-.header input:hover{
+input:required + label::after
+{
+    content: "*";
     color: red;
 }
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
 label{
     display: block;
     width: 100%;
 }
 .information{
     background-color: purple;
-    opacity: 0.4;
+    opacity: 0.7;
     border-radius: 10px;
     max-width: 75%;
     padding: 30px;
@@ -104,7 +114,7 @@ select
 }
 .information input{
     
-    position: absolute;
+   
     cursor: pointer;
  
 }
@@ -112,24 +122,24 @@ select
     content: "";
     background-color: white;
 }
-.radio
-{
+.radio{
     display: block;
-    width: 100%;
+    flex-basis: auto;
 }
-
 .checkbox
 {
     display: block;
+  
    
 }
 input[type="checkbox"]
 {
-    width: auto;
+    width: 20px;
+   
 }
 .footer {
     background-color: purple;
-    opacity: 0.4;
+    opacity: 0.7;
     border-radius: 10px;
     max-width: 75%;
     padding: 30px;
@@ -149,5 +159,9 @@ input[type="checkbox"]
 {
  padding: auto;
  width: 100%;
+}
+.footer input
+{
+    background: gray;
 }
 
