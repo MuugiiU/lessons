@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+.container
+{
+    margin: 0 auto;
+    background: blueviolet;
+    border: 2 solid green;
+    width: 620px;
+    padding: 5px;
+    height: 620px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+    transition: 1s all;
+}
+img:hover
+{
+ filter: none;
+}

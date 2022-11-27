@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    margin: auto;
+    border: 1px solid rgb(191, 191, 221);
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.col {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    border: 1 solid goldenrod;
+    transition-property: top, left;
+    transition-duration: 2s, 1s, 2s;
+    transition-delay: 0s, 0s, 1s;
+
+}
+
+.col1 {
+    background-color: coral;
+    z-index: 1000;
+
+
+}
+
+.col2 {
+    background-color: chocolate;
+    z-index: 900;
+}
+
+.col3 {
+    background-color: coral;
+    z-index: 800;
+}
+
+.col4 {
+    background-color: chocolate;
+    z-index: 700;
+}
+
+.box:hover .col1 {
+    top: 0;
+    left: 0;
+}
+
+.box:hover .col2 {
+    top: 0;
+    left: 400px;
+}
+
+.box:hover .col3 {
+    top: 400px;
+    left: 400px;
+}
+
+.box:hover .col4 {
+    left: 0px;
+    top: 400px;
+}
