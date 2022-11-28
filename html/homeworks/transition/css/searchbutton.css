@@ -6,18 +6,25 @@ body{
     padding: 0;
     text-align: center;
     justify-content: center;
-}
-.search
+} 
+ .search
 {
 display: flex;
-align-items: center;
-justify-content: center;
+background: pink;
+
 }
+.search-txt
+{
+    max-width: 400px;
+    width: 100%;
+    background: red;
+}
+
 input[type="search-txt"]
 {
     display: flex;
     color: white;
-    width: 60px;
+    width: 60px; 
     height: 60px;
     visibility: hidden;
 }

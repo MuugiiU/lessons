@@ -19,4 +19,7 @@ img{
 img:hover
 {
  filter: none;
+ transition-timing-function: ease-in;
+ transition-delay: 0.3s;
+ 
 }

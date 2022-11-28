@@ -17,6 +17,7 @@ h1{
     background: gray;
     font-size: 36px;
     color: wheat;
+    transition: 1s all ;
 }
 h1:hover
 {
@@ -26,26 +27,32 @@ h1:hover
 {
     position: relative;
     border-radius: 50%;
-   background:  red;
+    background:  red;
    font-size: 28px;
-   margin: -80px 280px; 
+   margin: -80px 280px;
    width: 80px; 
    color: wheat;
+   transition: 1s all ;
 }
-h3:hover
+.col:hover h3
    
-{   position: absolute;
-     overflow: hidden;
+{   
+    /* position: absolute; */
+    overflow: hidden;
     visibility: hidden;
-    transition: 1s all ;
-    transform: translate(-20px,-20px);
+    transform: translate(-80px,20px);
+    opacity: 0;
+
+
+
+    /* transform: translate(-20px,-20px); */
 }
- h3:hover+ h1::after
+ h3:hover, h1:hover .circle
 {
     content: "";
     background: white;
     transition: 1s all;
     visibility: hidden;
-    transform: translate(-40px,-80px);
+    /* transform: translate(-40px,-80px); */
    
 }
