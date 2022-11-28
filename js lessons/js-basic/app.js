@@ -42,7 +42,7 @@ console.log("c+h=" + s);
 // 11-r dasgal duusav
 // 12-r dasgal
 const PTI=3.14;
-let r=5;
+let r=2;
 let talbai=PTI*r**2;
 console.log(talbai);
 // 12-r dasgal duusav
