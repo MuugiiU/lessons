@@ -12,13 +12,13 @@
     <p>* denotes mandotory</p>
     <form action="">
 
-        <label for="fname">Full name:</label>
+        <label for="fname">Full Name*:</label>
         <input type="text" id="fname" placeholder="FirstName LastName" required/>
        
         <label for="email">Email address*:</label>
         <input type="email" id="email" placeholder="EMAIL_ADDRESS" required/>
      
-        <label for="select">Select Tour Package</label>
+        <label for="select">Select Tour Package*:</label>
         <select name="select" id="select" required>
             <option value="">Goa</option>
             <option value="">asia</option>
@@ -26,8 +26,32 @@
             <option value="">euro</option>
         </select>
     
-        <label for="">Arrival date</label>
+        <label for="">Arrival date*:</label>
         <input type="date" placeholder="m/d/y" required/>
+         
+        <label for="num">Number of persons*:</label>
+        <input type="number" id="num" placeholder="NUMBER_TYPE" required/>
+       <!-- check box start -->
+       <p> What would you want to avail?*</p>
+        <label for="checkbox"> Boarding</label>
+        <input type="checkbox" id="checkbox" required/> 
+
+        <label for="checkbox"> Fooding</label>
+        <input type="checkbox" id="checkbox" required/> 
+
+        <label for="checkbox"> Sight seeing</label>
+        <input type="checkbox" id="checkbox" required/> 
+        <!-- check box finish -->
+         
+        <label for="num">Discount Coupon code:</label>
+        <input type="number" id="num" placeholder="UNKNOWN_TYPE">
+       <p>Terms and conditions*</p> 
+        <label for="radio"> I agree</label>
+        <input type="radio" id="radio" name="agree" >
+
+        <label for="noradio"> I disagree</label>
+        <input type="radio" id="noradio" name="agree" value="I disagree">
+       
     </form> 
 </body>
 </html>
