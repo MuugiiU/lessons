@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+body
+{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    max-width: 650px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 50px;
+   
+}
+.head
+{
+    
+   
+    width: 600px;
+    
+}
+ h2
+{background-color: rgb(202, 95, 95);
+ font-size: 18px;
+}
+.body
+{
+    background: azure;
+    border: 2px dashed red;
+    width: 100%;
+}
+legend
+{
+    padding: 10px;
+    font-size: 18px;
+}
+select
+{
+    margin: 10px;
+}

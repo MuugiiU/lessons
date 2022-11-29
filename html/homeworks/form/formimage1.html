@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,51 +8,68 @@
     <title>Form Image 1</title>
     <link rel="stylesheet" href="./css/formimage1.css">
 </head>
+
 <body>
     <h1>Travel reservation </h1>
     <p>* denotes mandotory</p>
     <form action="">
+        <div>
+            <label for="fname">Full Name*:</label>
+            <input type="text" id="fname" placeholder="FirstName LastName" required />
+        </div>
+        <div>
+            <label for="email">Email address*:</label>
+            <input type="email" id="email" placeholder="EMAIL_ADDRESS" required />
+        </div>
+        <div>
+            <label for="select">Select Tour Package*:</label>
+            <select name="select" id="select" required>
+                <option value="">Goa</option>
+                <option value="">asia</option>
+                <option value="">america</option>
+                <option value="">euro</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Arrival date*:</label>
+            <input type="date" placeholder="m/d/y" required />
+            <div>
+                <div>
+                    <label for="num">Number of persons*:</label>
+                    <input type="number" id="num" placeholder="NUMBER_TYPE" required />
+                </div>
+                <!-- check box start -->
+                <div>
+                    <p> What would you want to avail?*</p>
+                    <div>
+                        <label for="checkbox"> Boarding
+                        <input type="checkbox" id="checkbox" required />
+                    </label>
+                    </div>
+                    <div>
+                        <label for="checkbox"> Fooding
+                        <input type="checkbox" id="checkbox" required /></label>
+                    </div>
+                    <div>
+                        <label for="checkbox"> Sight seeing
+                        <input type="checkbox" id="checkbox" required /></label>
+                    </div>
+                </div>
+                <!-- check box finish -->
+                <div>
+                    <label for="num">Discount Coupon code:</label>
+                    <input type="number" id="num" placeholder="UNKNOWN_TYPE">
+                </div>
+                <p>Terms and conditions*</p>
+                <label for="radio"> I agree
+                <input type="radio" id="radio" name="agree"></label>
+                <label for="noradio"> I disagree
+                <input type="radio" id="noradio" name="agree" value="I disagree"></label>
+                <div>
+                    <input type="submit" value="Complate Reservation ">
+                </div>
 
-        <label for="fname">Full Name*:</label>
-        <input type="text" id="fname" placeholder="FirstName LastName" required/>
-       
-        <label for="email">Email address*:</label>
-        <input type="email" id="email" placeholder="EMAIL_ADDRESS" required/>
-     
-        <label for="select">Select Tour Package*:</label>
-        <select name="select" id="select" required>
-            <option value="">Goa</option>
-            <option value="">asia</option>
-            <option value="">america</option>
-            <option value="">euro</option>
-        </select>
-    
-        <label for="">Arrival date*:</label>
-        <input type="date" placeholder="m/d/y" required/>
-         
-        <label for="num">Number of persons*:</label>
-        <input type="number" id="num" placeholder="NUMBER_TYPE" required/>
-       <!-- check box start -->
-       <p> What would you want to avail?*</p>
-        <label for="checkbox"> Boarding</label>
-        <input type="checkbox" id="checkbox" required/> 
-
-        <label for="checkbox"> Fooding</label>
-        <input type="checkbox" id="checkbox" required/> 
-
-        <label for="checkbox"> Sight seeing</label>
-        <input type="checkbox" id="checkbox" required/> 
-        <!-- check box finish -->
-         
-        <label for="num">Discount Coupon code:</label>
-        <input type="number" id="num" placeholder="UNKNOWN_TYPE">
-       <p>Terms and conditions*</p> 
-        <label for="radio"> I agree</label>
-        <input type="radio" id="radio" name="agree" >
-
-        <label for="noradio"> I disagree</label>
-        <input type="radio" id="noradio" name="agree" value="I disagree">
-       
-    </form> 
+    </form>
 </body>
+
 </html>

@@ -8,7 +8,7 @@ body{
 
 .container {
     width: 1100px;
-    background: url(../1.avif) center/ cover no-repeat;
+    background: url(../1.avif) center/ cover no-repeat ;
     color: white;
     /* margin-left: 200px; */
     background-image: linear-gradient(to right, rgba(234, 209, 235, 0.75) rgba(255,0,0,0.5));
