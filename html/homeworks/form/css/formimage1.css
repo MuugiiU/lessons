@@ -5,19 +5,19 @@ body
 {
     border: 1px solid gainsboro;
     border-radius: 5px;
-    width: 400px;
+    width: 600px;
     margin: auto;
     padding: 10px;
+  
    
 }
 
-label 
-{
-    margin: 10px;
-    display: block;
-}
-input
-{
+label{
     display: flex;
-    margin: 5px;
+    padding: 10px;
+}
+input[type="checkbox"]
+{
+    /* display:inline-block; */
+    flex-direction: column;
 }
