@@ -109,7 +109,7 @@ const bmi = jin/((undur/100)**2)
     console.log("Та жиндээ анхаарна уу");
  }
  console.log("========N-5 finish=========");
-  N-6 
+//   N-6 
 let duriintoo=prompt("Дурын тоо оруулна уу");
  if(duriintoo%2==0){
     console.log("Тэгш тоо байна");
