@@ -20,10 +20,10 @@ console.log("=======n-4===========");
 let lastName="Уртнасан овогтой";
 let firstName="Мөнхцэцэг ";
 let country="Улаанбаатар хотод амьдардаг";
-let contact=lastName.concat()+firstName.concat()+country.concat();
+// let contact=lastName.concat()+firstName.concat()+country.concat();
  console.log(contact);
  console.log("===========n-5============");
 //  n-6 start
 
-
+console.log("\n 1 2 3 4 5\n 2 3 4 5 1 \n 3 4 5 1 2 \n 4 5 1 2 3 \n 5 1 2 3 4");
 
