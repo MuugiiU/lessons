@@ -35,15 +35,15 @@
   
    // n-5
    
-   let n=parseInt(prompt("Та тоо оруулна уу"));
-   let nem=1;
-   let sum1=0;
+//    let n=parseInt(prompt("Та тоо оруулна уу"));
+//    let nem=1;
+//    let sum1=0;
 
-    while (nem<=n) {
-        sum1=sum1+nem
-        nem+=1;
-    }
-        console.log(`n хүртлэх тооны нийлбэр: ${sum1}`);
+//     while (nem<=n) {
+//         sum1=sum1+nem
+//         nem+=1;
+//     }
+//         console.log(`n хүртлэх тооны нийлбэр: ${sum1}`);
       
    
 
@@ -71,4 +71,6 @@
        
 //     }
 // 
+// n-7
+let n=parent(prompt("Гараас тоо оруул"));
 
