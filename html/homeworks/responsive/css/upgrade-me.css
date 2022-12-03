@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+   
+    margin: 0;
+    font-size: 16px;
+    max-width: 100%;
+}
+div li
+{
+    margin: 10px;
+}
+.navbar ul
+{
+    background: blue; 
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+   
+
+   
+}
+li{
+    display: inline-block;
+    text-align: center;
+   
+   
+}
+.navbar a
+{
+    
+    color: white;
+    text-decoration: none;
+    background: blue;
+}
+.row 
+{ 
+    display: flex;
+}
+.col 
+{
+    padding: 10px;
+    max-width: 100%;
+}
+ .col h1 {
+    color: rgb(67, 67, 149);
+}
+.col p 
+{
+    color: gray;
+}
+button 
+
+{
+    background: rgb(84, 134, 196);
+    border: 1 solid;
+    border-radius: 10px;
+  
+}
+button a 
+{   
+    text-decoration: none;
+    color: white;
+}
+button   a:hover {
+    background: rgb(77, 45, 112);
+}
+.stiky{
+    position: sticky;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 70px;
+}
+
+span {
+    color: rgb(73, 73, 175);
+}
+@media screen and (max-width: 768px) {
+     .col  {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        
+    } 
+}
+@media screen  and (max-width:768px){
+    .stiky {
+        text-align: center;
+    }    
+}
+@media screen and (max-width: 481px) {
+    .row {
+        
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+} 
+

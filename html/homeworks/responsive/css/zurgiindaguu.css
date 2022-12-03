@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    max-width: 1280px;
+    background: darkgray;
+   
+}
+ul li {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    
+   
+}
+ul li a {
+    list-style: none;
+    text-decoration: none;
+    justify-content: space-between;
+    justify-items: flex-start;
+    color: white;
+
+  
+}
