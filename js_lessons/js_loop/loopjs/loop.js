@@ -174,27 +174,30 @@
        num=Math.floor(num/10);
     }
     console.log("tanii oruulsan toonii urbuu too",reverseNum);
-  if(reverseNum=0){
+    while (reverseNum !==0) {
+     let p=reverseNum%10
+   
+  if(p===0){
     console.log("zero");
-  } else if(reverseNum=1) {
+  } else if(p===1) {
     console.log("one");
-  } else if( reverseNum=2) {
+  } else if( p===2) {
      console.log("two");
-  } else if(reverseNum=3) {
+  } else if(p===3) {
     console.log("three");
-  } else if (reverseNum=4) {
+  } else if (p===4) {
    console.log("four");
-  } else if(reverseNum=5) {
+  } else if(p===5) {
    console.log("five");
-  } else if(reverseNum=6) {
+  } else if(p===6) {
    console.log("six");
-  } else if(reverseNum=7) {
+  } else if(p===7) {
    console.log("seven");
-  } else if(reverseNum=8) {
+  } else if(p===8) {
    console.log("eigth");
   } else if( reverseNum=9) {
    console.log("nine");
   } else {
    console.log("ten");
-  }
-   
+  } 
+    }
