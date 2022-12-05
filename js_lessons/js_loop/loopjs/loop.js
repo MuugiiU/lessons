@@ -72,5 +72,132 @@
 //     }
 // 
 // n-7
-let n=parent(prompt("Гараас тоо оруул"));
+// let a=parseInt(prompt("Гараас тоо оруулна уу"));
+// let b=parseInt(prompt("Гараас 2дахь тоогоо оруулна уу"));
+//   if(a>b){
+//     max=a;
+//     console.log("max");
+//   } else {
+//    max=b;
+//    console.log("max");
+//   }
+   
+// if (max===2){
+//    console.log('${max},бол анхны тоо') 
+//  } else {
+//    let i=2;
+//    while(a<b){
+//       let nuuts=true;
+//       while(i<a&&i<b){
+//          if(a%i===0){
+//             nuuts=false;
+//             break;
+//          }
+//          i++;
+//       }
+//       if(nuuts){
+//          console.log('${a & b}("Анхны тоо мөн")');
+//       } else {
+//          console.log('${a& b}("Анхны тоо биш")');
+//       }
+//       max += 1;
+      
+//    }
+   
+//  }
+//    // n-8 factral too buyu garaas oruulsan toonii urjber
+// let n=parseInt(prompt("garaas toogoo oruulna uu!"));
+//  let add=1;
+//  let num=1;
+//   while (num<=n){
+//    add=add*num;
+//    num+=1;
+//   }
+// console.log("garaas avsan toonii urjver:" , add);
+// // n-8 duusav
+// n-9 ugugdsun toonii niilber oloh  
+//  let a=parseInt(prompt("garaas too oruulna uu"));
+//   let sum=0;
+//   let num=1;
+//   while(num<=a) {
+//    sum=sum+num;
+//    num+=1;
+//   }
+//   console.log("garaas oruulsan toonii niilber",sum);
+// n-9 duusav
+// //  n-10 ugugdsun toonii sondgoi toog olood niilberiig ni olno uu?
+// let n=parseInt(prompt("garaas duriin too abna uu!"));
+// let count=0;
+// let sum=0;
+//  while(count<=n) {
+//    if(count%2!==0){
+//       console.log(count);
+//       sum=sum+count;
 
+//    }
+//   count+=1; 
+//   console.log("garaas oruulsan toonii sondgoi toonii niilver",sum);
+// }
+//  n-10 duusav
+// // n-11 n-hurtleh toonii tegsh too olood tuuniihee niilberiig olno uu?
+//  let n=parseInt(prompt("garaas duriin toogoo oruulna uu"));
+//  let count=0;
+//  sum=0;
+//   while(count<=n) {
+//    if(count%2==0) {
+//       console.log(count);
+//       sum=sum+count;
+//  } count+=1;
+//  console.log("garaas oruulsan toonii tegsh toonii niilber",sum);
+//   }
+// //   n-11 duusav
+// n-12 ugugdsun toonii urbuu toog olno uu?
+// let num = parseInt(prompt("ta toogoo oruulna uu"));
+// let reverseNum=0;
+// let nuuts=0;
+// console.log("tanii oruulsan too",num);
+//  while(num!==0) {
+//     unit=num%10;
+//     reverseNum=reverseNum*10+unit;
+//     num=Math.floor(num/10);
+//  }
+//  console.log("tanii oruulsan toonii urbuu too",reverseNum);
+   // n-12 duusav
+   // n-13 ugugdsun toog ugeer hevlej haruulna uu?
+   let num = parseInt(prompt("ta toogoo oruulna uu"));
+   let reverseNum=0;
+   let nuuts=0;
+   console.log("tanii oruulsan too",num);
+    while(num!==0) {
+       unit=num%10;
+       reverseNum=reverseNum*10+unit;
+       num=Math.floor(num/10);
+    }
+    console.log("tanii oruulsan toonii urbuu too",reverseNum);
+    while (reverseNum !==0) {
+     let p=reverseNum%10
+   
+  if(p===0){
+    console.log("zero");
+  } else if(p===1) {
+    console.log("one");
+  } else if( p===2) {
+     console.log("two");
+  } else if(p===3) {
+    console.log("three");
+  } else if (p===4) {
+   console.log("four");
+  } else if(p===5) {
+   console.log("five");
+  } else if(p===6) {
+   console.log("six");
+  } else if(p===7) {
+   console.log("seven");
+  } else if(p===8) {
+   console.log("eigth");
+  } else if( reverseNum=9) {
+   console.log("nine");
+  } else {
+   console.log("ten");
+  } 
+    }
