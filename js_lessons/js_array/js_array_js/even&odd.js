@@ -1,11 +1,25 @@
-let array =[5, 6, 4, 12, 19, 121, 1, 7, 9, 63];
-let even=0;
-let i=0;
- while(even<=array.length[i]){
-    if(even%2===0) {
-        console.log(even);
+let array = [5, 6, 4, 12, 19, 121, 1, 7, 9, 63];
+let even = [];
+let j = 0, i = 0;
+while (i < array.length) {
+    if (array[i] % 2 === 0) {
+        even[j] = array[i];
+        console.log(array[i]);
+        j++;
     }
     i++;
- }
+}
 
+console.log(even);
+console.log("==========сондгой тоо хэвлэ=======");
+ let odd=[];
+  while( i<array.lengt){
+    if(array[i]%2!==0){
+        odd[j] = array[i];
+        console.log(array[i]);
+        j++;
+} 
+  i++;
+}
+console.log(odd);
 
