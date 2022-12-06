@@ -10,5 +10,6 @@ console.log(itCompanies);
 console.log("=======Эхний үг хасагдаж байгаа ==========");
 itCompanies.shift();
 console.log(itCompanies);
-
+itCompanies.slice(2,4.1);
+console.log(itCompanies.slice(2.2, 4));
 
