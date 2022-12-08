@@ -177,8 +177,11 @@ if ( max===2){
 //     console.log("tanii oruulsan toonii urbuu too",reverseNum);
 //     while (reverseNum !==0) {
 //      let p=reverseNum%10
+//      switch(p)
+//       case 0:    
    
-//   if(p===0){
+
+// if(p===0){
 //     console.log("zero");
 //   } else if(p===1) {
 //     console.log("one");
