@@ -71,41 +71,41 @@
        
 //     }
 // 
-// n-7
-let a=parseInt(prompt("Гараас тоо оруулна уу"));
-let b=parseInt(prompt("Гараас 2дахь тоогоо оруулна уу"));
-let max;
-  if(a>b){
-    max=a;
-    console.log("max");
-  } else {
-   max=b;
-   console.log("max");
-  }
+// n-7 
+// let a=parseInt(prompt("Гараас тоо оруулна уу"));
+// let b=parseInt(prompt("Гараас 2дахь тоогоо оруулна уу"));
+// let max;
+//   if(a>b){
+//     max=a;
+//     console.log("max");
+//   } else {
+//    max=b;
+//    console.log("max");
+//   }
    
-if ( max===2){
-   console.log('${max},бол анхны тоо') 
- } else {
-   let i=2;
-   while(a<b){
-      let nuuts=true;
-      while(i<a&&i<b){
-         if(a%i===0){
-            nuuts=false;
-            break;
-         }
-         i++;
-      }
-      if(nuuts){
-         console.log('${a & b}("Анхны тоо мөн")');
-      } else {
-         console.log('${a& b}("Анхны тоо биш")');
-      }
-      max += 1;
+// if ( max===2){
+//    console.log('${max},бол анхны тоо') 
+//  } else {
+//    let i=2;
+//    while(a<b){
+//       let nuuts=true;
+//       while(i<a&&i<b){
+//          if(a%i===0){
+//             nuuts=false;
+//             break;
+//          }
+//          i++;
+//       }
+//       if(nuuts){
+//          console.log('${a & b}("Анхны тоо мөн")');
+//       } else {
+//          console.log('${a& b}("Анхны тоо биш")');
+//       }
+//       max ++;
       
-   }
+//    }
    
- }
+//  }
 //    // n-8 factral too buyu garaas oruulsan toonii urjber
 // let n=parseInt(prompt("garaas toogoo oruulna uu!"));
 //  let add=1;
