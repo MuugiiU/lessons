@@ -23,7 +23,8 @@
 // // n-3
 // console.log("==========n-3==============");
 // let t=parseInt(prompt("toogoo oruulna uu!"))
-// let text =[`s`,`d`,`f`,`g`];
+// let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
+// `s`,`d`,`f`,`g`,`h`,`j`,`k`,`l`,`z`,`x`,`c`,`v`,`b`,`n`,`m`];
 //  function condition(text ) {
 //      for (let i=0; i<=text.length; i++) {
 //        if(text[i]==t){
@@ -33,14 +34,39 @@
 // }  
 //  let shalgah=condition(text)
 //  console.log(shalgah);
- // n-4
+ // n-4 ugugdsun 2 too interval dahi sanamsargui too butsaah function bich
  
-   function random(){
+  //  function random(){
   
-    return Math.floor(Math.random()*(max-min+1)+min);
-  }
-  let min=parseInt(prompt("garaas toogoo  oruulna uu"));
-  let max=(parseInt(prompt("garaas toogoo oruulna uu")));
-   let ih_too=random(random);
-   console.log(ih_too);
+  //   return Math.floor(Math.random()*(max-min+1)+min);
+  // }
+  // let min=parseInt(prompt("garaas toogoo  oruulna uu"));
+  // let max=(parseInt(prompt("garaas toogoo oruulna uu")));
+  //  let ih_too=random();
+  //  console.log(ih_too);
+  //  console.log("=============n-4====================");
 
+  //  n-5 ugugdsun array-iin dundajiig oloh function bicheerei
+  // let n=parseInt(prompt("ta  utga oruulna uu"));
+  // let n1=parseInt(prompt("ta utgaa oruulna uu"));
+  //  function dundaj (n,n1) {
+  //    return (n+n1)/2;
+  //  }
+  //  let s=dundaj(n,n1);
+  //   console.log(s);
+  // console.log("============n-5=================");
+  // n-6 ugugdsun array-iin niilber oloh function
+  let array=[parseInt(prompt("garaas toogoo oruulna uu"))];
+  console.log(array);
+  let add=0;
+  let i=0;
+   function sum(array) {
+   while(i<array.length) {
+    add+=array[i];
+    i++;
+   }
+       return dundaj=add+array.length;
+   }
+   let a=sum(array);
+
+console.log(a);

@@ -165,43 +165,32 @@
 //  console.log("tanii oruulsan toonii urbuu too",reverseNum);
    // n-12 duusav
    // n-13 ugugdsun toog ugeer hevlej haruulna uu?
-//    let num = parseInt(prompt("ta toogoo oruulna uu"));
-//    let reverseNum=0;
-//    let nuuts=0;
-//    console.log("tanii oruulsan too",num);
-//     while(num!==0) {
-//        unit=num%10;
-//        reverseNum=reverseNum*10+unit;
-//        num=Math.floor(num/10);
-//     }
-//     console.log("tanii oruulsan toonii urbuu too",reverseNum);
-//     while (reverseNum !==0) {
-//      let p=reverseNum%10
-//      switch(p)
-//       case 0:    
-   
-
-// if(p===0){
-//     console.log("zero");
-//   } else if(p===1) {
-//     console.log("one");
-//   } else if( p===2) {
-//      console.log("two");
-//   } else if(p===3) {
-//     console.log("three");
-//   } else if (p===4) {
-//    console.log("four");
-//   } else if(p===5) {
-//    console.log("five");
-//   } else if(p===6) {
-//    console.log("six");
-//   } else if(p===7) {
-//    console.log("seven");
-//   } else if(p===8) {
-//    console.log("eigth");
-//   } else if( reverseNum=9) {
-//    console.log("nine");
-//   } else {
-//    console.log("ten");
-// }
-//   } 
+ let num =parseInt(prompt("garaas toogoo oruulna uu"));
+ let p=0, m=0,s=0;
+  while(num!==0){
+   p=num%10;
+   s=s*10 +p; 
+   if(p<10) {
+      m+=p;
+   }
+   num=Math.floor(num/10);
+  }
+  console.log(s);
+  let useg =" ";
+   while (s!==0) {
+      p=s%10;
+      switch(p) {
+         case 0:{useg += "тэг",+" ";break}
+         case 1:{useg +="нэг",+" ";break}
+         case 2:{useg +="хоёр",+" ";break}
+         case 3:{useg += "гурав",+" "; break}
+         case 4:{useg +="дөрөв",+" ";break}
+         case 5:{useg +="тав",+" ";break}
+         case 6:{useg += "зургаа",+" "; break}
+         case 7:{useg +="долоо",+ " ";break}
+         case 8:{useg +="найм",+" ";break}
+         case 9:{useg +="ес",+" ";break}
+      }
+      s= Math.floor(s/10);
+   }
+  console.log(useg);

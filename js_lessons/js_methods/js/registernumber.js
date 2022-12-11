@@ -2,9 +2,10 @@
 let w = 'А';
 let v= "";
 function isCorrectReg(a) {
-    if( a[0]==='A') {
+    console.log(a[0]);
+    if( a[0]=='А') {
      v = "Архангай";
-     console.log(v);
+     console.log("result:", v);
     } else if (a[0]==='Б') {
      console.log("Баян-Өлгий");
     } 
@@ -69,7 +70,7 @@ function isCorrectReg(a) {
        else {
         console.log("байхгүй байна");
        }
-       return console.log(v);
+       return console.log(w);
           
 }
 //  let text=isCorrectReg(a);
