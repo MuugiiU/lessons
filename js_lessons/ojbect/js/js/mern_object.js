@@ -61,16 +61,12 @@ const users = [
 
     console.table(users[0]);
     console.log("==========n-2==============");
-    let skills=0 ;
-     for (let i = 0; i<users;i++) {
-        for(let j=0; j<users[0]; j++) {
-            skills=users[i][j];
-           if(users=>skills.length) {
-                console.log(users);
-            }
-        }
+    let skills;
+     for (let i = 0; i<=skills.length;i++) {
+         
+    }
     
-     } console.log(skills);
+
 
 
     
