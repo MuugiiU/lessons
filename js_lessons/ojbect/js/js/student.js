@@ -25,7 +25,7 @@ let students=[
 },
    
 ];
-// console.table(students);
+console.table(students);
 //   function age(nas) {
 //     for(let i=0; i<nas.length;i++){
 //         if(nas>=20) {
@@ -36,16 +36,16 @@ let students=[
 // let x=age(students);
 // console.log(x);
 
-function single(names) {
-    let true=0;
-    for(let i =0; i<names.length;i++) {
-        if(names[i].single==="true") {
-            true++;
-        }
+// function single(names) {
+//     let true=0;
+//     for(let i =0; i<names.length;i++) {
+//         if(names[i].single==="true") {
+//             true++;
+//         }
                
-    }   
-    return {single:true, single:names.length - true};
-}  
-let s=single(name);
-console.log(s);
+//     }   
+//     return {single:true, single:names.length - true};
+// }  
+// let s=single(name);
+// console.log(s);
 
