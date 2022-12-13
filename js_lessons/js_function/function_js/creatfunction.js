@@ -13,28 +13,28 @@
 // let array =[1,2,3,4,5,6,7,8,9];
 //  function condition(array ) {
 //      for (let i=0; i<=array.length; i++) {
-//        if(array[i]==ar){
-//        console.log(array);
+//        if(array[i]== ar){
+//        console.log(array[i]);
 //      } else return  -1;
 //  }
 // }  
 //  let nuhtsul=condition(array)
 //  console.log(nuhtsul);
 // // n-3
-// console.log("==========n-3==============");
-// let t=parseInt(prompt("toogoo oruulna uu!"))
-// let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
-// `s`,`d`,`f`,`g`,`h`,`j`,`k`,`l`,`z`,`x`,`c`,`v`,`b`,`n`,`m`];
-//  function condition(text ) {
-//      for (let i=0; i<=text.length; i++) {
-//        if(text[i]==t){
-//        console.log(text);
-//      } else return  -1;
-//  }
-// }  
-//  let shalgah=condition(text)
-//  console.log(shalgah);
- // n-4 ugugdsun 2 too interval dahi sanamsargui too butsaah function bich
+// // console.log("==========n-3==============");
+let t=parseInt(prompt("toogoo oruulna uu!"))
+let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
+`s`,`d`,`f`,`g`,`h`,`j`,`k`,`l`,`z`,`x`,`c`,`v`,`b`,`n`,`m`];
+ function condition(text ) {
+     for (let i=0; i<=text.length; i++) {
+       if(text[i]==t){
+       console.log(text);
+     } else return  -1;
+ }
+}  
+ let shalgah=condition(text)
+ console.log(shalgah);
+ //n-4 ugugdsun 2 too interval dahi sanamsargui too butsaah function bich
  
   //  function random(){
   
@@ -47,26 +47,26 @@
   //  console.log("=============n-4====================");
 
   //  n-5 ugugdsun array-iin dundajiig oloh function bicheerei
-  // let n=parseInt(prompt("ta  utga oruulna uu"));
-  // let n1=parseInt(prompt("ta utgaa oruulna uu"));
-  //  function dundaj (n,n1) {
-  //    return (n+n1)/2;
-  //  }
-  //  let s=dundaj(n,n1);
-  //   console.log(s);
+//   let n=parseInt(prompt("ta  utga oruulna uu"));
+//   let n1=parseInt(prompt("ta utgaa oruulna uu"));
+//    function dundaj (n,n1) {
+//      return (n+n1)/2;
+//    }
+//    let s=dundaj(n,n1);
+//     console.log(s);
   // console.log("============n-5=================");
   // n-6 ugugdsun array-iin niilber oloh function
-  let array=[parseInt(prompt("garaas toogoo oruulna uu"))];
-  console.log(array);
-  let add=0;
-  let i=0;
-   function sum(array) {
-   while(i<array.length) {
-    add+=array[i];
-    i++;
-   }
-       return dundaj=add+array.length;
-   }
-   let a=sum(array);
+//   let array=[parseInt(prompt("garaas toogoo oruulna uu"))];
+//   console.log(array);
+//   let add=0;
+//   let i=0;
+//    function sum(array) {
+//    while(i<array.length) {
+//     add+=array[i];
+//     i++;
+//    }
+//        return dundaj=add+array.length;
+//    }
+//    let a=sum(array);
 
 console.log(a);

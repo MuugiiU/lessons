@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .box {
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        background-color: rgb(82,148,105);
+        border-radius: 20px;
+    }
+    #myBtn {
+        padding: 1rem;
+        cursor: pointer;
+        border: 0;
+        border-radius: 50px;
+        background-color: rgba(82,148,82, 0.8);
+        color: #fff;
+    }
+</style>
+<body>
+   <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+<button id ="myBtn">change color</button>
+   <script>
+    const myBtn=document.getElementById("myBtn");
+    const body =document.getElementById("body");
+    const divs =document.getElementsByClassName("box");
+    const change = () => {
+        for (let i=0; i<divs.length;i++) {
+            let color =getColor();
+            divs[i].style.backgroundColor=color;
+        }
+    }
+    const getColor =()=> {
+      let red=Math.floor(Math.random()*256);
+      let green=Math.floor(Math.random()*256);
+      let blue=Math.floor(Math.random()*256);
+       return`rgb(${red},${green},${blue})`;
+  } 
+  myBtn.addEventListener("click",change);
+   </script>
+</body>
+</html>
