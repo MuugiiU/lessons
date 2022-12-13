@@ -12,7 +12,6 @@ console.log("div");
 
 for(let i=0;i<3; i++) { //davtaltaar button uusgej bg
    var button=document.createElement("button");
-   
    button.textContent="Change color";
    body.appendChild(button);
 }
@@ -26,6 +25,7 @@ const change=()=> {
     let color=getColors();
     console.log(color);
     divs[i].style.backgroundColor=color;
+    buttons[i].style.backgroundColor=color;
 
   }
 }
@@ -42,8 +42,3 @@ for(let i=0; i<buttons.length; i++) {
   buttons[i].addEventListener("mouseover",change)
  }
  
-// let myButton = document.getElementById("myBtn");
-// function changeBackgroundColor () {
-// myButton.style = "background-color: green"
-// }
-// myButton.addEventListener("click",changeBackgroundColor);

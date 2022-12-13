@@ -61,12 +61,14 @@ const users = [
 
     console.table(users[0]);
     console.log("==========n-2==============");
-   
+   let arr1 = [];
   for(let i=0 ; i<users.length ; i++){
-    if(users[i].skills<skills.length) {
-       console.log(skills);
-    }
+    arr1.push(users[i].skills)
+  //   if(users[i].skills<skills.length) {
+  //      console.log(skills);
+  //   }
   }
+  console.log(arr1)
   // console.log(users[2].skills);
 
 
