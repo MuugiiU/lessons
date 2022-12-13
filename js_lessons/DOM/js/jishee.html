@@ -5,19 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+     <link rel="stylesheet" href="./css/jishee.css">
 </head>
 <body>
-    <form action="">
-        <h1>Бүртгэл үүсгэх</h1><hr>
-        <input type="email" placeholder="Enter Email" id="email">
+    <div class="container">
+    
+        <h1>Бүртгэл үүсгэх</h1>
+        <hr />
+        
         <label for="email">Email</label>
-
-        <input type="password" placeholder="Enter Password" id="password">
-        <label for="password">Password</label>
-
-        <input type="password" placeholder="Repeat Password">
-
-    </form>
+        <input type="email" placeholder="Enter Email" id="email" required/>
+       
+        
+        <label for="password">Password</label >
+        <input type="password" placeholder="Enter Password" id="password" required/>
+       
+         
+        <label for="repeat">Repeat Password</label>
+        <input type="password" placeholder="Repeat Password" id="repeat"required/>
+        <button id="btn">Бүртгүүлэх</button>
+  
+</div>
     <script src="./js/jishee.js"></script>
 </body>
 </html>
