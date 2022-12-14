@@ -31,8 +31,8 @@ const change=()=> {
 }
 const getColors =()=> {
   let red =Math.floor(Math.random()*256).toString();
-  let green =Math.floor(Math.random()*256);
-  let blue =Math.floor(Math.random()*256);
+  let green =Math.floor(Math.random()*256).toString();
+  let blue =Math.floor(Math.random()*256).toString();
      return`rgb(${red},${green},${blue},${0.2})`;
 
 }
