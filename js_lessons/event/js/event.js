@@ -9,9 +9,7 @@ const cardItem = (utga) => {    /// add hiisen ved jagsaaltan door input bolon b
         <input type="text" id="text" readonly value="${utga}">
     
 
-        <button class="edit"> 
-
-         <i class="fa-sharp fa-solid fa-pen"></i></button>
+     <button class="edit" > <i class="fa-sharp fa-solid fa-pen"></i></button>
     <button class="done"> <i class="fa-solid fa-check" style="color: green;"></i></button>
     <button class="delete" onclick="ustgah(this)">
          <i class="fa-sharp fa-solid fa-trash " style="color: red;"></i></button> </div>`;
@@ -32,8 +30,15 @@ const ustgah = (e) => {        //ustgah function
     const parent = e.parentNode.parentNode;
     const child = e.parentNode;
     parent.removeChild(child)
+
 }
 
+const edit = (e) => {        //edit hiihdee
+    let add = document.getElementById("text") ;
+    const ad=add.value;
+     
+
+}
 addbtn.addEventListener("click", nemeh); // button darah ved nemeh uilel hiine gesniig zaana
 document.addEventListener('keyup', (e) => {
     if (e.key === "Enter") {
