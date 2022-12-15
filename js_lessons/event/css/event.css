@@ -52,5 +52,7 @@ hr {
     margin: 0 auto;
     margin-bottom: 50px;
     border: 1px solid #f49d1a;
-    
+}
+.line {
+    text-decoration:line-through;
 }
