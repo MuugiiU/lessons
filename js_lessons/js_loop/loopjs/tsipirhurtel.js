@@ -1,6 +1,15 @@
+let too=prompt("indexeer hevleh toogoo oruulna uu");
+let index;
+ for(let i=0; i<too; i++) {
+    index=i;
+    console.log(index);
+ }
+
 let n=parseInt(prompt("garaas toogoo oruulsan uu"));
-console.log(n);
-for(let i=0; i<=n;i++) {
-    let count=i;
-    console.log(str.count());
+let count;
+for(let i=9; i>=n;i--) {
+     count=i;
+     console.log(count);
 }
+
+
