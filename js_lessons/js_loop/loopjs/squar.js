@@ -1,17 +1,19 @@
 let n=prompt("squar zurah toogoo oruulna uu");
-let txt='*';
+let txt='';
 for (let i=0; i<n; i++) {
     for(let j=0; j<n; j++) {
        
-        if(i==j||i==n||j==0||j==n) {
-            txt=i+j;
+        if(i==0||i==n-1||j==0||j==n-1) {
+            txt+="*";
          
-            console.log(txt);
+         
         } else {
-            console.log("");
+            txt+=" "
+           
         }
-        console.log("\n");
+      
     }
-    
+    txt+="\n";
 }
+console.log(txt);
      
