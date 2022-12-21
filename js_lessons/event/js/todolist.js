@@ -1,38 +1,64 @@
+document.addEventListener("keyup", (e) => {
+  if (e.key === "Enter") {
+    taskAdd();
+  }
+});
 
-const addbtn = document.getElementById("btn");//button id
-const text = document.getElementById("text"); //input id
-const task = document.getElementsByClassName("task")[0]//jagsaaliin id 
+// Array - Todo list version
+const allTask = [
+  { name: "JS", status: true, priority: "high" },
+  { name: "HTML", status: false, priority: "low" },
+  { name: "CSS", status: false, priority: "medium" },
+];
 
-const addTodo = () => {
-  // allTask array ruu ruu text iig nemne.
-  let inputtext = text.value;
-  allTask.push(inputtext);
-  renderTodoApp();
-};
-
-addbtn.addEventListener("click", addTodo);
-
-const deleteTodo = (index) => {
-  console.log("II", index);
-  allTask.splice(index, 1);
-  renderTodoApp();
-};
-const allTask=[{name:"JS",status:true, priority:"high"},
-               {name:"HTML",status:false,priority:"high"}];
 const renderTodoApp = () => {
   //AllTask array aar delgetsend list haruulna
-  task.innerHTML = "";
+  tasks.innerHTML = "";
   for (let i = 0; i < allTask.length; i++) {
-    const done=allTask[i].status ? "strikethrough":" ";
+    console.log();
+    const done = allTask[i].status ? "strikethrough" : "";
     const item = `   
-                <div class="task">
-                    <input type="text" class="text" readonly value="${allTask[i]}" />
+                <div class="task ${allTask[i].priority}">
+                    <input type="text" class="text ${done}" readonly value="${allTask[i].name}" />
                     <div class="actions">
                         <button class="edit"><i class="fas fa-pen"></i></button>
-                        <button class="done"><i class="fas fa-check"></i></button>
+                        <button class="done" onclick="done(${i})"><i class="fas fa-check"></i></button>
                         <button class="delete" onclick="deleteTodo(${i})"><i class="fas fa-trash"></i></button>
                     </div>
                 </div>`;
     taskList.innerHTML += item;
   }
 };
+
+const addTodo = () => {
+  // allTask array ruu ruu text iig nemne.
+  let text = inputText.value;
+  let pr = selectItem.value;
+  const newTask = {
+    name: text,
+    status: false,
+    priority: pr,
+  };
+  allTask.push(newTask);
+  renderTodoApp();
+};
+
+const deleteTodo = (index) => {
+  console.log("II", index);
+  allTask.splice(index, 1);
+  renderTodoApp();
+};
+
+const done = (index) => {
+  allTask[index].status = !allTask[index].status;
+  renderTodoApp();
+};
+
+function changed() {
+  console.log(priority.value);
+}
+
+addBtn.addEventListener("click", addTodo);
+priority.addEventListener("change", changed);
+
+renderTodoApp();
