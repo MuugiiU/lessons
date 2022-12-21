@@ -1,3 +1,5 @@
+const task=document.getElementById("tasks");
+
 document.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     taskAdd();
