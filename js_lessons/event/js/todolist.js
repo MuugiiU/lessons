@@ -1,4 +1,7 @@
-const task=document.getElementById("tasks");
+const addBtn = document.getElementById("add");
+const taskList = document.getElementById("tasks");
+const inputText = document.getElementById("to-do-input");
+
 
 document.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
