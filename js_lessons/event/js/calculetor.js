@@ -29,13 +29,13 @@ const clear=(e)=>{  //tsewerleh ();
   console.log(child);
 }
 const operator=()=>{
-let nmbrs = dis.value.split(/[+\-\*\%]/);
+let numbers = dis.value.split(/[+\-\*\%]/);
 let operators = dis.value.replace(/\d/g, "");
 console.log("ddfdf", nmbrs, operators);
-nmbrs = nmbrs.map(Number(nmbrs));
+numbers = numbers.map(Number(dis.value));
  let minus = operators.indexOf("-");
  if(minus!=-1){
-  result = hasah(nmbrs[minus],nmbrs[minus+1]);
+  result = hasah(numbers[minus],numbers[minus+1]);
   console.log(result);
  }
   //  switch(uildel.value=="%")
@@ -48,7 +48,7 @@ console.log(dis);
 console.log(addbtn);
 
 
-addbtn.forEach((btn) => {
+addbtn.forEach((btn) => { 
   btn.addEventListener("click",(e) =>{
     console.log("Clicked",e.target.textContent);
     dis.value+=e.target.textContent;
