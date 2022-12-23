@@ -1,70 +1,73 @@
 // Variables
-const addbtn=document.querySelectorAll(".btn");
-const uildel=document.querySelectorAll(".btn1");
-const ustgah=document.getElementsByClassName("btn3");
-const dis=document.querySelector("#display");
-const firtsNum=parseFloat(addbtn);
-const secondNum=parseFloat(addbtn);
 
+const allbtn = document.querySelectorAll(".btn");
+const uildelBtns = document.querySelectorAll(".oper");
+const ustgah = document.getElementsByClassName("btn3")[0];
+const dis = document.querySelector("#display");
+const equal = document.querySelector(".equal");
+let firtsNum = null;
+let secondNum = null;
+let uildel = null;
 let result="";
-let inputs = "";
 
-
-// Functions
- const add=()=>{ //urjver();
-   return firtsNum*secondNum;
+// Aripmatic-iin uildel hiideg Functions
+ const mul =(a, b)=>{ //urjver();
+   return a * b;
  }
- const sum=()=> { //niilber();
-  return firtsNum+secondNum;
+ const add=(a, b)=> { //niilber();
+  return a + b;
  }
-const huvaah=()=>{ //huvaah();
-  return firtsNum/secondNum;
+const div=(a, b)=>{ //huvaah();
+  return a / b;
 }
-const hasah=(firtsNum, secondNum)=>{  //hasah();
-  return firtsNum-secondNum;
+const sub=(a, b)=>{  //hasah();
+  return a - b;
 }
 const clear=(e)=>{  //tsewerleh ();
-  const child=e.parentNode;
-  parent.removeChild(child);
-  console.log(child);
+  dis.value= " ";
+  uildel = " ";
+
 }
 const operator=()=>{
-let numbers = dis.value.split(/[+\-\*\%]/);
-let operators = dis.value.replace(/\d/g, "");
-console.log("ddfdf", numbers, operators);
-numbers = numbers.map(Number(dis.value));
-}
- switch(operator) {
-  case '*': add(); break;
-  case '%': huvaah(); break;
-  case '-': hasah(); break;
-  case '+': sum(); break;
-
+  secondNum = dis.value;
+   if(firtsNum && secondNum && uildel){  //enhii bolon 2dahi toog bn uu? gej shalgaj bg
+    switch(uildel) {
+      case '*': return mul(parseFloat(firtsNum), parseFloat(secondNum));
+      case '%': return div(parseFloat(firtsNum), parseFloat(secondNum));
+      case '-': return sub(parseFloat(firtsNum), parseFloat(secondNum)); 
+      case '+': return add(parseFloat(firtsNum), parseFloat(secondNum));
+      default: break;
+  } 
  }
+}
 
 
+// Too aguulsan buh btn deer event holboj bn
+console.log(uildelBtns);
 
-console.log(dis);
-console.log(addbtn);
-
-
-addbtn.forEach((btn) => { 
+allbtn.forEach((btn) => { 
   btn.addEventListener("click",(e) =>{
     console.log("Clicked",e.target.textContent);
-    dis.value+=e.target.textContent;
+    dis.value += e.target.textContent;
   });
 });
-uildel.forEach((btn1) => {
+
+uildelBtns.forEach((btn1) => {   // uildel gesen  button deer darah ved 
     btn1.addEventListener("click",(e) =>{
-      console.log("Clicked",e.target.textContent);
-      dis.value+=e.target.textContent;
+      uildel = e.target.textContent;
+      console.log(uildel);
+      firtsNum = dis.value;
+      dis.value = "";
     });
   });
 
 
-  // ustgah.addEventListener("click",clear());
- 
- 
-    
-   
+equal.addEventListener("click",()=>{  // tsentsuu button 
+      result = operator();
+      dis.value = result;
+});
 
+ustgah.addEventListener("click",clear);
+  
+  
+    
