@@ -18,7 +18,7 @@ let inputs = "";
   return firtsNum+secondNum;
  }
 const huvaah=()=>{ //huvaah();
-  return firtsNum/secondNum();
+  return firtsNum/secondNum;
 }
 const hasah=(firtsNum, secondNum)=>{  //hasah();
   return firtsNum-secondNum;
@@ -31,16 +31,16 @@ const clear=(e)=>{  //tsewerleh ();
 const operator=()=>{
 let numbers = dis.value.split(/[+\-\*\%]/);
 let operators = dis.value.replace(/\d/g, "");
-console.log("ddfdf", nmbrs, operators);
+console.log("ddfdf", numbers, operators);
 numbers = numbers.map(Number(dis.value));
- let minus = operators.indexOf("-");
- if(minus!=-1){
-  result = hasah(numbers[minus],numbers[minus+1]);
-  console.log(result);
- }
-  //  switch(uildel.value=="%")
-  // console.log(dis.value);
 }
+ switch(operator) {
+  case '*': add(); break;
+  case '%': huvaah(); break;
+  case '-': hasah(); break;
+  case '+': sum(); break;
+
+ }
 
 
 
