@@ -1,51 +1,59 @@
-let students=[
+let students = [
     {
-    name: 'Сэд-Эрдэнэ',
-    birthofYear: 1999,
-    hobby: "морь",
-    single:"тйим"
-},
-{
-    name: 'Гончигсумлай',
-    birthofYear: 2008,
-    hobby: "сагс",
-    single:"үгүй"
-},
-{
-    name: 'Эрдэнэ',
-    birthofYear: 1999,
-    hobby: "hulbumbug",
-    single:"тийм"
-},
-{
-    name: 'Сэдээ',
-    birthofYear: 2007,
-    hobby: "усан спорт",
-    single:"үгүй"
-},
-   
+        name: 'Сэд-Эрдэнэ',
+        on: 1999,
+        hobby: "морь",
+        single: "bish"
+    },
+    {
+        name: 'Гончигсумлай',
+        on: 2008,
+        hobby: "сагс",
+        single: "mun"
+    },
+    {
+        name: 'Эрдэнэ',
+        on: 1999,
+        hobby: "hulbumbug",
+        single: "bish"
+    },
+    {
+        name: 'Сэдээ',
+        on: 2007,
+        hobby: "усан спорт",
+        single: "mun"
+    },
+
 ];
-console.table(students);
-//   function age(nas) {
-//     for(let i=0; i<nas.length;i++){
-//         if(nas>=20) {
-//             return age;
-//         }
-//       } 
-// }
-// let x=age(students);
-// console.log(x);
+let ha = 2002;
+let bodlogo = () => {
+    for (let i = 0; i <= students.length; i++) {
+        if (students[i].on <= ha) {
+            console.log(students[i].name);
 
-// function single(names) {
-//     let true=0;
-//     for(let i =0; i<names.length;i++) {
-//         if(names[i].single==="true") {
-//             true++;
-//         }
-               
-//     }   
-//     return {single:true, single:names.length - true};
-// }  
-// let s=single(name);
-// console.log(s);
+        }
 
+    }
+
+}
+bodlogo();
+
+let gants =()=>{
+   
+     for(let i=0; i<=students.length; i++){
+        if(students[i].single==="mun"){
+           console.log(studends);
+        }
+     }
+}
+ gants();
+ let age=()=> {
+    let add=0;
+
+    for( let i = 0; i<students.length; i++) {
+       add=add+students[i].on;
+        
+    }
+        return  add/students.length;
+   }
+ age();
