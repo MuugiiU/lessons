@@ -18,8 +18,7 @@ for (let i = 1; i < row; i++) {
     console.log("Ehnii davtalt");
     for (let j = 1; j < col; j++) {
         console.log("Daraagiin davtalt");
-        // console.log(activities[i][j]);
-        // console.log(24/(100*activities[i][j]));
+       
         let percent = Math.round((activities[i][j] / 24) * 100);
         huvi[i][j] = percent + "%";
     }
