@@ -8,6 +8,9 @@ const cartCount = document.querySelector(".cartCount");
 const category = document.querySelector(".dropdown-menu");
 const cartList = document.querySelector(".cartList");
 const productlist = document.querySelector(".productlist");
+const sub=document.querySelector(".sub");
+const addcount=document.querySelector(".count");
+const num=document.querySelector(".num")
 //  hooson [] zarlag onoohod belej bg 
 let allProducts = [];
 let cart_products = [];
@@ -66,15 +69,17 @@ const dis_cartProducts = () => {
             const cartItem = `
             <div class="row">
                         <div class="row main align-items-center">
-                            <div class="col-2 width:10%"><img class="img-fluid"  src="${product.thumbnail}"></div>
+                            <div class="col-2"style="width:150px"><img class="img-fluid " src="${product.thumbnail}"></div>
                             <div class="col">
-                                <div class="row text-muted">${product.title}</div>
+                                <div class="row text-muted" style="font-size:16px">${product.title}</div>
                                 <div class="row"></div>
                             </div>
                             <div class="col">
-                                <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a>
+                                <button class="sub" onclick="hasah()" style="border:none">-</button>
+                                <button class="num" style="border:none">1</button>
+                                <button class="count" onclick="count()" style="border:none">+</button>
                             </div>
-                            <div class="col">$${product.price} <span class="close">&#1000</span></div>
+                            <div class="col" style="color:blue">$${product.price}</div>
                         </div>
                     </div>`;
             cartList.innerHTML += cartItem;
@@ -88,6 +93,7 @@ const addcart = (idx) => {
     console.log(cart_products);
     cartCount.innerHTML = cart_products.length;
     dis_cartProducts();
+
 }
 
 //  display deeree category uusgej bg
@@ -99,8 +105,13 @@ const displayCategory = (dt) => {
             const categoryList = ` <li><button class="dropdown-item category">${ct}</button></li>`
             category.innerHTML += categoryList;
         })
-}
-
+};
+// product count and niilber
+const total=cart_products.reduce((total,product)=>{
+    return total+product.price
+},0);
+// total();
+console.log(total);
 
 // category-goo dummy-gaasaaa salgaj abch bg
 const getCategory = async () => {
@@ -111,3 +122,30 @@ const getCategory = async () => {
    
 };
 getCategory();
+
+
+const count=()=>{
+  addcount+=1;
+   num.innerHTML=addcount;
+}
+
+const hasah=()=>{
+    sub-=1;
+    num.innerHTML=sub;
+}
+// $('#').pagination = async()=> {
+//     const page = await fetch( "https://dummyjson.com/products");
+//     locator: 'product',
+//     totalNumber: 100,
+//     pageSize: 20,
+//     ajax: {
+//          function() {
+//             dataContainer.html('categories');
+//         }
+//     },
+//      pageSize function(data, pagination) {
+//         // template method of yourself
+//         let html = template(data);
+//         dataContainer.html(html);
+//     }
+// })
