@@ -6,10 +6,10 @@ const dis = document.getElementById("too");
 const stars = document.querySelector('.star');
 const cartCount = document.querySelector(".cartCount");
 const category = document.querySelector(".dropdown-menu");
+const menu=document.querySelector(".a-menu");
 const cartList = document.querySelector(".cartList");
 const productlist = document.querySelector(".productlist");
-const sub=document.querySelector(".sub");
-const addcount=document.querySelector(".count");
+
 const num=document.querySelector(".num")
 //  hooson [] zarlag onoohod belej bg 
 let allProducts = [];
@@ -77,7 +77,7 @@ const dis_cartProducts = () => {
                             <div class="col">
                                 <button class="sub" onclick="hasah()" style="border:none">-</button>
                                 <button class="num" style="border:none">1</button>
-                                <button class="count" onclick="count()" style="border:none">+</button>
+                                <button class="count" onclick="count(this)" style="border:none">+</button>
                             </div>
                             <div class="col" style="color:blue">$${product.price}</div>
                         </div>
@@ -88,11 +88,15 @@ const dis_cartProducts = () => {
 };
 //  my cartdaa productaa hevlej bg
 dis_cartProducts();
+
 const addcart = (idx) => {
+    console.log("aaa");
     cart_products.push(allProducts[idx]);
     console.log(cart_products);
     cartCount.innerHTML = cart_products.length;
     dis_cartProducts();
+    const tp = calculateTotal();
+    console.log(tp);
 
 }
 
@@ -102,16 +106,13 @@ const displayCategory = (dt) => {
     console.log("data:", dt);
     dt.forEach(
         (ct, idx) => {
+            const menus=`<li ><a href=""class="menu" style="color:blue; text-decoration: none">${ct}</a></li>`
+            menu.innerHTML += menus;
             const categoryList = ` <li><button class="dropdown-item category">${ct}</button></li>`
             category.innerHTML += categoryList;
+
         })
 };
-// product count and niilber
-const total=cart_products.reduce((total,product)=>{
-    return total+product.price
-},0);
-// total();
-console.log(total);
 
 // category-goo dummy-gaasaaa salgaj abch bg
 const getCategory = async () => {
@@ -123,17 +124,28 @@ const getCategory = async () => {
 };
 getCategory();
 
-
+//  nemeh button
 const count=()=>{
-  addcount+=1;
-   num.innerHTML=addcount;
+   
+    
+}
+// hasah button
+const hasah=()=>{
+   
 }
 
-const hasah=()=>{
-    sub-=1;
-    num.innerHTML=sub;
+// product count and niilber
+const calculateTotal = () => {
+    const total = cart_products.reduce((total,product)=>{
+        return total+product.price*product.coun
+    },0);
+    return total;
 }
-// $('#').pagination = async()=> {
+
+
+
+
+// $('#products').pagination = async()=> {
 //     const page = await fetch( "https://dummyjson.com/products");
 //     locator: 'product',
 //     totalNumber: 100,
