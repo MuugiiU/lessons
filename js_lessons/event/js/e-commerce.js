@@ -119,7 +119,7 @@ const addCart = (productId) => {
 //     const tp = calculateTotal();
 //     console.log(tp);
 
-// }
+// 
 
 //  display deeree category uusgej bg
 let allCategory = [];
