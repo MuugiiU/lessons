@@ -1,24 +1,23 @@
 console.log("ECOMMERCE");
 // html-eesee barij avch bg heseg
-const addbth = document.querySelector(".btn1");
-const subbtn = document.querySelector(".btn2");
-const dis = document.getElementById("too");
-const stars = document.querySelector('.star');
+
+const stars = document.querySelector('.star');  //rating 
 const cartCount = document.querySelector(".cartCount");
-const category = document.querySelector(".dropdown-menu");
+const categoryList = document.querySelector(".categoryList");
 const menu = document.querySelector(".a-menu");
 const cartList = document.querySelector(".cartList");
 const productlist = document.querySelector(".productlist");
+const cartPrice = document.querySelector(".cartPrice");
 
-const num = document.querySelector(".num")
+// const num = document.querySelector(".num")
 //  hooson [] zarlag onoohod belej bg 
-let allProducts = [];
-let cart_products = [];
+ 
+let cartProducts = [];
 //  display deeree product-aa hevlej bg davtalt ashiglan
 const displayProduct = () => {
-    allProducts.forEach(
-        (product, idx) => {
-            const card = `<div class="col-12 col-md-6 col-xl-3 mb-4">
+    productlist.innerHTML =" ";
+    allProducts.forEach((product, idx) => {
+            const productItem = `<div class="col-12 col-md-6 col-xl-3 mb-4 hoverable hover-shadow-1-soft">
             <div class="card mr-3">
                 <img src="${product.thumbnail}" class="card-img-top" style="width:100%; height:200px">
                 <div class="card-body">
@@ -29,7 +28,7 @@ const displayProduct = () => {
                        <div class="row">
                            <div class="col-6">
                            <p class="star" id="star${product.id}" style="color:gold"> ${product.rating}</p>
-                            <button class="btn btn-outline-primary px-2 mx-2 " onclick="addcart(${idx})">
+                            <button class="btn btn-outline-primary px-2 mx-2 " onclick="addCart(${product.id})">
                                   Add cart<i class="fa-solid fa-cart-shopping"></i></button>
                              </div>
                         </div>
@@ -37,7 +36,7 @@ const displayProduct = () => {
                 </div>
             </div>
         </div>`
-            productlist.innerHTML += card;
+            productlist.innerHTML += productItem;
 
             //  star rating uusgej bg
             let rating = product.rating;
@@ -51,21 +50,85 @@ const displayProduct = () => {
 
     );
 };
+
+let allCategory = [];
+const displayCategory = () => {
+    categoryList.innerHTML = "";
+  allCategories.forEach((category) =>{
+    const categoryItem = ` <li><button onclick="getCategoryProduct('${category}')" class="btn btn-primary">${category}</button></li>`
+      categoryList.innerHTML += categoryItem;
+
+       
+            const menus = `<li ><a href=""class="menu" style="color:blue; text-decoration: none onclick="getCategoryProduct('${category}') ">${category}</a></li>`
+            menu.innerHTML += menus;
+           
+        })
+};
+
+// category-goo dummy-gaasaaa salgaj abch bg
+const getCategories = async () => {
+    const responce = await fetch("https://dummyjson.com/products/categories");
+    const data = await responce.json();
+    allCategories = data;
+    displayCategory();
+
+};
+
+const getCategoryProduct = async (category) => {
+    console.log(category);
+    const response = await fetch(
+        `https://dummyjson.com/products/category/${category}`
+    );
+    const data = await response.json();
+    allProducts = data.products;
+    displayProduct();
+};
+
 //  dummy-gaasaa productaa salgaj abch bg function
+
+
 const getProducts = async () => {
     const responce = await fetch("https://dummyjson.com/products");
     const data = await responce.json();
     allProducts = data.products;
     displayProduct();
-    console.log("Data:", data);
-};
-getProducts();
-// my cartdaa productaa nemj bg heseg davtalt ashiglan    
+    displayCart();
 
-const dis_cartProducts = () => {
+  
+};
+getCategories();
+getProducts();
+
+const addCart = (productId) => {
+    const findIdx = cartProducts.findIndex((item) => item.id === productId);
+    if (findIdx > -1) {
+      //ene baraa cartProducts array dotor bval nemehgui harin baraanii too hemjee nemne
+      cartProducts[findIdx].count += 1;
+    } else {
+      //bhgui bol baraag nemne
+      const findIndex = allProducts.findIndex((item) => item.id === productId);
+  
+      const newBaraa = { count: 1, ...allProducts[findIndex] };
+      cartProducts.push(newBaraa);
+    }
+    cartCount.innerText = cartProducts.length;
+    displayCart();
+  };
+// my cartdaa productaa nemj bg heseg davtalt ashiglan  
+
+// product count and niilber
+const calculateCartPrice = () => {
+
+    let sumPrice = 0;
+    for (product of cartProducts) {
+         sumPrice = sumPrice + product.price * product.count;
+        }
+      return sumPrice;
+};
+
+const displayCart = () => {
     cartList.innerHTML = " ";
-    cart_products.forEach(
-        (product) => {
+    for(product of cartProducts){
             const cartItem = `
             <div class="row">
                         <div class="row main align-items-center">
@@ -74,11 +137,7 @@ const dis_cartProducts = () => {
                                 <div class="row text-muted" style="font-size:16px">${product.title}</div>
                                 <div class="row"></div>
                             </div>
-                            <div class="col">
-                                <button class="sub" onclick="hasah()" style="border:none">-</button>
-                                <button class="num" style="border:none">1</button>
-                                <button class="count" onclick="count(this)" style="border:none">+</button>
-                            </div>
+                            
                             <div class="col" style="color:blue">$${product.price}</div>
                             <div class="">
                             <input class="form-control" min="0" id="quantity" value="${product.count}" type="number" />
@@ -87,87 +146,8 @@ const dis_cartProducts = () => {
                     </div>`;
             cartList.innerHTML += cartItem;
         }
-    );
-    const totalCartPrice=calculateTotal ();
+    const totalCartPrice=calculateCartPrice ();
     cartPrice.innerText=`$${totalCartPrice}`;
 };
 //  my cartdaa productaa hevlej bg
-dis_cartProducts();
 
-const addCart = (productId) => {
-    const findIdx = dis_cartProducts.findIndex((item) => item.id === productId);
-    if (findIdx > -1) {
-      //ene baraa cartProducts array dotor bval nemehgui harin baraanii too hemjee nemne
-      dis_cartProducts[findIdx].count += 1;
-    } else {
-      //bhgui bol baraag nemne
-      const findIndex = allProducts.findIndex((item) => item.id === productId);
-  
-      const newBaraa = { count: 1, ...allProducts[findIndex] };
-      dis_cartProducts.push(newBaraa);
-    }
-    cartCount.innerText = dis_cartProducts.length;
-    dis_cartProducts();
-  };
-
-// const addcart = (idx) => {
-//     console.log("aaa");
-//     cart_products.push(allProducts[idx]);
-//     console.log(cart_products);
-//     cartCount.innerHTML = cart_products.length;
-//     dis_cartProducts();
-//     const tp = calculateTotal();
-//     console.log(tp);
-
-// 
-
-//  display deeree category uusgej bg
-let allCategory = [];
-const displayCategory = (dt) => {
-    console.log("data:", dt);
-    dt.forEach(
-        (ct, idx) => {
-            const menus = `<li ><a href=""class="menu" style="color:blue; text-decoration: none">${ct}</a></li>`
-            menu.innerHTML += menus;
-            const categoryList = ` <li><button onclick=""class="dropdown-item category">${ct}</button></li>`
-            category.innerHTML += categoryList;
-
-        })
-};
-
-// category-goo dummy-gaasaaa salgaj abch bg
-const getCategory = async () => {
-    const responce = await fetch("https://dummyjson.com/products/categories");
-    const data = await responce.json();
-    console.log(dt);
-    displayCategory(dt);
-
-};
-getCategory();
-// category-iinhoo product-ruu oroh
-const getCategoryProduct = async (ct) => {
-    console.log(ct);
-    const response = await fetch(
-        `https://dummyjson.com/products/category/${ct}`
-    );
-    const data = await response.json();
-    allProducts = data.products;
-    displayProduct();
-};
-
-
-
-// product count and niilber
-const calculateTotal = () => {
-
-      let sumPrice = 0;
-      for (product of cartProducts) {
-           sumPrice = sumPrice + product.price * product.count;
-          }
-        return sumPrice;
-};
-    // const total = cart_products.reduce((total, product) => {
-    //     return total + product.price * product.count
-    // }, 0);
-    // return total;
-// };
