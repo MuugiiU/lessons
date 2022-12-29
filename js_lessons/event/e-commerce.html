@@ -25,9 +25,8 @@
                     <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="./img/Letter.png" class=" text-bg-primary p-3 rounded-4 ">
                     </button> <span class="ms-4">E-commerce</span>
-                    <ul class="dropdown-menu">
-                     
-                    </ul>
+                    <!-- category uusgej bg class -->
+                    <ul class="dropdown-menu  categoryList"></ul>
                   </div>
                    <!-- category menu -->
             </a>
@@ -52,7 +51,7 @@
                 <span style="color: blue;">My cart<i class="fa-solid fa-cart-shopping"></i></span>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cartCount">
                 0
-                    <span class="visually-hidden">unread messages</span>
+                    <span class="visually-hidden">shopping cart list count</span>
                   </span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
@@ -62,14 +61,27 @@
                             class="fa-solid fa-cart-shopping"></i></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-              
+                  <!-- my cart added -->
                 <div class="offcanvas-body cartList"></div>
                   <!-- my cart added -->
-
+                    <!-- footer -->
                   <hr>
-              <div class="total"> Total:</div>
+                  <div class="modal-footer">
+                    <div class="d-flex justify-content-between p-2 mb-2"
+                      style="background-color: #e1f5fe">
+                      <h5 class="fw-bold mb-0 me-1 ">Total:</h5>
+                      <h5 class="fw-bold mb-0 cartPrice">$2261</h5>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button"
+                      class="btn btn-secondary m-2" data-bs-dismiss="offcanvas">Close </button>
+                    <button type="button" class="btn btn-primary">Buy</button>
+                  </div>
+                  <!-- footer -->
             </div>
         </div>
+  <!-- category a-link-r hiisen -->
         <div class="container-fluid">
           <ul class="a-menu "> </ul>
         </div>

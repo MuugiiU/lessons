@@ -6,15 +6,15 @@ const dis = document.getElementById("too");
 const stars = document.querySelector('.star');
 const cartCount = document.querySelector(".cartCount");
 const category = document.querySelector(".dropdown-menu");
-const menu=document.querySelector(".a-menu");
+const menu = document.querySelector(".a-menu");
 const cartList = document.querySelector(".cartList");
 const productlist = document.querySelector(".productlist");
 
-const num=document.querySelector(".num")
+const num = document.querySelector(".num")
 //  hooson [] zarlag onoohod belej bg 
 let allProducts = [];
 let cart_products = [];
-    //  display deeree product-aa hevlej bg davtalt ashiglan
+//  display deeree product-aa hevlej bg davtalt ashiglan
 const displayProduct = () => {
     allProducts.forEach(
         (product, idx) => {
@@ -59,9 +59,9 @@ const getProducts = async () => {
     displayProduct();
     console.log("Data:", data);
 };
-
 getProducts();
- // my cartdaa productaa nemj bg heseg davtalt ashiglan    
+// my cartdaa productaa nemj bg heseg davtalt ashiglan    
+
 const dis_cartProducts = () => {
     cartList.innerHTML = " ";
     cart_products.forEach(
@@ -80,25 +80,46 @@ const dis_cartProducts = () => {
                                 <button class="count" onclick="count(this)" style="border:none">+</button>
                             </div>
                             <div class="col" style="color:blue">$${product.price}</div>
+                            <div class="">
+                            <input class="form-control" min="0" id="quantity" value="${product.count}" type="number" />
+                          </div>
                         </div>
                     </div>`;
             cartList.innerHTML += cartItem;
         }
     );
+    const totalCartPrice=calculateTotal ();
+    cartPrice.innerText=`$${totalCartPrice}`;
 };
 //  my cartdaa productaa hevlej bg
 dis_cartProducts();
 
-const addcart = (idx) => {
-    console.log("aaa");
-    cart_products.push(allProducts[idx]);
-    console.log(cart_products);
-    cartCount.innerHTML = cart_products.length;
+const addCart = (productId) => {
+    const findIdx = dis_cartProducts.findIndex((item) => item.id === productId);
+    if (findIdx > -1) {
+      //ene baraa cartProducts array dotor bval nemehgui harin baraanii too hemjee nemne
+      dis_cartProducts[findIdx].count += 1;
+    } else {
+      //bhgui bol baraag nemne
+      const findIndex = allProducts.findIndex((item) => item.id === productId);
+  
+      const newBaraa = { count: 1, ...allProducts[findIndex] };
+      dis_cartProducts.push(newBaraa);
+    }
+    cartCount.innerText = dis_cartProducts.length;
     dis_cartProducts();
-    const tp = calculateTotal();
-    console.log(tp);
+  };
 
-}
+// const addcart = (idx) => {
+//     console.log("aaa");
+//     cart_products.push(allProducts[idx]);
+//     console.log(cart_products);
+//     cartCount.innerHTML = cart_products.length;
+//     dis_cartProducts();
+//     const tp = calculateTotal();
+//     console.log(tp);
+
+// }
 
 //  display deeree category uusgej bg
 let allCategory = [];
@@ -106,9 +127,9 @@ const displayCategory = (dt) => {
     console.log("data:", dt);
     dt.forEach(
         (ct, idx) => {
-            const menus=`<li ><a href=""class="menu" style="color:blue; text-decoration: none">${ct}</a></li>`
+            const menus = `<li ><a href=""class="menu" style="color:blue; text-decoration: none">${ct}</a></li>`
             menu.innerHTML += menus;
-            const categoryList = ` <li><button class="dropdown-item category">${ct}</button></li>`
+            const categoryList = ` <li><button onclick=""class="dropdown-item category">${ct}</button></li>`
             category.innerHTML += categoryList;
 
         })
@@ -118,46 +139,35 @@ const displayCategory = (dt) => {
 const getCategory = async () => {
     const responce = await fetch("https://dummyjson.com/products/categories");
     const data = await responce.json();
-    console.log(data);
-    displayCategory(data);
-   
+    console.log(dt);
+    displayCategory(dt);
+
 };
 getCategory();
+// category-iinhoo product-ruu oroh
+const getCategoryProduct = async (ct) => {
+    console.log(ct);
+    const response = await fetch(
+        `https://dummyjson.com/products/category/${ct}`
+    );
+    const data = await response.json();
+    allProducts = data.products;
+    displayProduct();
+};
 
-//  nemeh button
-const count=()=>{
-   
-    
-}
-// hasah button
-const hasah=()=>{
-   
-}
+
 
 // product count and niilber
 const calculateTotal = () => {
-    const total = cart_products.reduce((total,product)=>{
-        return total+product.price*product.coun
-    },0);
-    return total;
-}
 
-
-
-
-// $('#products').pagination = async()=> {
-//     const page = await fetch( "https://dummyjson.com/products");
-//     locator: 'product',
-//     totalNumber: 100,
-//     pageSize: 20,
-//     ajax: {
-//          function() {
-//             dataContainer.html('categories');
-//         }
-//     },
-//      pageSize function(data, pagination) {
-//         // template method of yourself
-//         let html = template(data);
-//         dataContainer.html(html);
-//     }
-// })
+      let sumPrice = 0;
+      for (product of cartProducts) {
+           sumPrice = sumPrice + product.price * product.count;
+          }
+        return sumPrice;
+};
+    // const total = cart_products.reduce((total, product) => {
+    //     return total + product.price * product.count
+    // }, 0);
+    // return total;
+// };
