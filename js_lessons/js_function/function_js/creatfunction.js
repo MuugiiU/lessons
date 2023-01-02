@@ -22,18 +22,18 @@
 //  console.log(nuhtsul);
 // // n-3
 // // console.log("==========n-3==============");
-let t=parseInt(prompt("toogoo oruulna uu!"))
-let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
-`s`,`d`,`f`,`g`,`h`,`j`,`k`,`l`,`z`,`x`,`c`,`v`,`b`,`n`,`m`];
- function condition(text ) {
-     for (let i=0; i<=text.length; i++) {
-       if(text[i]==t){
-       console.log(text);
-     } else return  -1;
- }
-}  
- let shalgah=condition(text)
- console.log(shalgah);
+// let t=parseInt(prompt("textee oruulna uu?"))
+// let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
+// `s`,`d`,`f`,`g`,`h`,`j`,`k`,`l`,`z`,`x`,`c`,`v`,`b`,`n`,`m`];
+//  function condition(text ) {
+//      for (let i=0; i<=text.length; i++) {
+//        if(text[i]==t){
+//        console.log(text);
+//      } else return  -1;
+//  }
+// }  
+//  let shalgah=condition(text)
+//  console.log(shalgah);
  //n-4 ugugdsun 2 too interval dahi sanamsargui too butsaah function bich
  
   //  function random(){
@@ -69,4 +69,29 @@ let text =[`q`,`w`,`e`,`r`,`t`,`y`,`u`,`i`,`o`,`p`,`a`,
 //    }
 //    let a=sum(array);
 
-console.log(a);
+// console.log(a);
+// console.log("======================n-8====================");
+// Өгөгдсөн тэмдэгт мөрийн бүх үсгийг том үсэг болгох функц бич.
+// let up=prompt("texteee oruulna uu!");
+// let arr=[];
+// const Upper=()=>{
+//   for(let i=0; i<=up.length; i++){
+//       arr=up[i].toUpperCase();
+//       console.log(arr);
+//   }
+//   return arr;
+// }
+// Upper();
+
+// console.log("=============n-9========================");
+// Өгөгдсөн тэмдэгт мөрийн бүх үсгийг жижиг үсэг болгох функц бич.
+let low=prompt("texteee oruulna uu!");
+let arr=[];
+const lower=()=>{
+  for(let i=0; i<=low.length; i++){
+      arr=arr+low[i].toLowerCase();
+      console.log(arr);
+  }
+  return arr;
+}
+lower();
