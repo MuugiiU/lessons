@@ -37,4 +37,4 @@ let total = function() {
 }
 total();
 console.log("==========n-3=============");
-let
+let 
