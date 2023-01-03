@@ -5,16 +5,36 @@
 // 3. Нийт төлбөрийн дундаж - ийг олдог 1 function.
 
 console.log("============n-1===============");
+// let une=parseInt(prompt("unen dungee oruulna uu"));
+// let sum=[];
+// let total = function() {
+//  
+//   if( une<=5000 && une>=30000) {
+//      sum=une+((une*20)/100);
+//     console.log(sum);
+//   } else {
+//     sum=une+(une*15/100);
+//     console.log(sum);
+//   }
+//   return sum;
+// }
+// total();
+
+console.log("==========n-2==============");
+// zuvhun nemegdel tulbur oldog function
 let une=parseInt(prompt("unen dungee oruulna uu"));
 let sum=[];
-let total=()=>{
-    for(let i=0;i<=une.length;i++)
-   if( une[i]<=5000&&une[i]>=30000) {
-      return sum=une[i]+((une[i]*20)/100);
-     console.log(sum);
-   } else {
-     sum=une[i]+(une[i]*15/100)
-     console.log(sum);
-   }
+let total = function() {
+  
+  if( une<=5000 && une>=30000) {
+     sum=(une*20)/100;
+    console.log(sum);
+  } else {
+    sum=une*15/100;
+    console.log(sum);
+  }
+  return sum;
 }
 total();
+console.log("==========n-3=============");
+let
