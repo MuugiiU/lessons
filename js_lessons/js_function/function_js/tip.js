@@ -18,3 +18,4 @@ let total=()=>{
    }
 }
 total();
+// console.log(price1>=5000 && price1<=30000 ? price1*0.2+price1 : price1*0.15+price1) ;
