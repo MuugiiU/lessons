@@ -4,18 +4,68 @@
 // 2. Зөвхөн нэмэгдэл төлбөрийг олдог 1 function.
 // 3. Нийт төлбөрийн дундаж - ийг олдог 1 function.
 
+let totalPrice = 0
+let orderNumber = 0
+
 console.log("============n-1===============");
-let une=parseInt(prompt("unen dungee oruulna uu"));
-let sum=[];
-let total=()=>{
-    for(let i=0;i<=une.length;i++)
-   if( une[i]<=5000&&une[i]>=30000) {
-      return sum=une[i]+((une[i]*20)/100);
-     console.log(sum);
-   } else {
-     sum=une[i]+(une[i]*15/100)
-     console.log(sum);
-   }
+let une1=parseInt(prompt("unen dungee oruulna uu"));
+const moneyToPay = paymentWithTips(une1)
+console.log("Toloh dun: ", moneyToPay)
+console.log("Niit dun: ", total(moneyToPay))
+console.log("dundaj: ", findAvarage())
+
+
+
+
+// let sum=[];
+// let total = function() {
+//  
+//   if( une<=5000 && une>=30000) {
+//      sum=une+((une*20)/100);
+//     console.log(sum);
+//   } else {
+//     sum=une+(une*15/100);
+//     console.log(sum);
+//   }
+//   return sum;
+// }
+// total();
+
+console.log("==========n-2==============");
+// zuvhun nemegdel tulbur oldog function
+let une2=parseInt(prompt("unen dungee oruulna uu"));
+const moneyToPay2 = paymentWithTips(une2)
+console.log("Toloh dun: ", moneyToPay2)
+console.log("Niit dun: ", total(moneyToPay2))
+console.log("dundaj: ", findAvarage())
+
+// total();
+console.log("==========n-3=============");
+let une3=parseInt(prompt("unen dungee oruulna uu"));
+const moneyToPay3 = paymentWithTips(une3)
+console.log("Toloh dun: ", moneyToPay3)
+console.log("Niit dun: ", total(moneyToPay3))
+console.log("dundaj: ", findAvarage())
+
+function total(addingPrice) {
+  totalPrice += addingPrice
+  orderNumber += 1
+  return totalPrice
 }
+
+function paymentWithTips(price) {
+  if (!price) return console.log('aldaa ', price)
+
+  if (price > 5000 && price < 30000) return Math.round(price * 1.15)
+
+  return Math.round(price * 1.2)
+}
+<<<<<<< HEAD
 total();
 // console.log(price1>=5000 && price1<=30000 ? price1*0.2+price1 : price1*0.15+price1) ;
+=======
+
+function findAvarage () {
+  return Math.round(totalPrice / orderNumber)
+}
+>>>>>>> 1d0c4b63e784ceea38e300ef6f41dda75afae8e2

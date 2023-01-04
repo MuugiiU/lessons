@@ -86,12 +86,13 @@
 // console.log("=============n-9========================");
 // Өгөгдсөн тэмдэгт мөрийн бүх үсгийг жижиг үсэг болгох функц бич.
 let low=prompt("texteee oruulna uu!");
-let arr=[];
+let arr= '';
 const lower=()=>{
-  for(let i=0; i<=low.length; i++){
-      arr=arr+low[i].toLowerCase();
-      console.log(arr);
-  }
-  return arr;
+  // for(let i=0; i<=low.length; i++){
+  //     arr = arr + low[i].toLowerCase();
+  //     console.log(arr);
+  // }
+  console.log(low.toLocaleLowerCase());
+  return low.toLocaleLowerCase();
 }
-lower();
+ lower();
