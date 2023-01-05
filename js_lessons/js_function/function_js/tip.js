@@ -60,12 +60,7 @@ function paymentWithTips(price) {
 
   return Math.round(price * 1.2)
 }
-<<<<<<< HEAD
-total();
-// console.log(price1>=5000 && price1<=30000 ? price1*0.2+price1 : price1*0.15+price1) ;
-=======
 
 function findAvarage () {
   return Math.round(totalPrice / orderNumber)
 }
->>>>>>> 1d0c4b63e784ceea38e300ef6f41dda75afae8e2
