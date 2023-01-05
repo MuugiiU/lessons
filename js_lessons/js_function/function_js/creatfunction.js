@@ -88,11 +88,7 @@
 let low=prompt("texteee oruulna uu!");
 let arr= '';
 const lower=()=>{
-  // for(let i=0; i<=low.length; i++){
-  //     arr = arr + low[i].toLowerCase();
-  //     console.log(arr);
-  // }
-  console.log(low.toLocaleLowerCase());
+         console.log(low.toLocaleLowerCase());
   return low.toLocaleLowerCase();
 }
  lower();

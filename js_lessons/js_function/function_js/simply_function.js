@@ -7,7 +7,33 @@
 console.log("===============n-1======================");
 let name=prompt("Neree oruulna uu?");
 const print=()=>{
+  return name;
   console.log("Full name:",name);
 }
 print();
+console.log("===============n-2======================");
+let firstName=prompt("ovogoo oruulna uu");
+let lastName=prompt("ta uuriin neree oruulna uu");
+let fullname=firstName.concat(" ",lastName);
+console.log(fullname);
+console.log("================n-3=====================");
+ let firstparameter=parseInt(prompt("ehnii utgaa oruulna uu")) ;
+ let secondparameter=parseInt(prompt("2 dahi utgaa oruulna uu"));
+ let niilber="";
+ const sum=()=>{
+   console.log(niilber);
+ 
+   return niilber=firstparameter+secondparameter;
+   
+ }
+sum();
+console.log("================n-4=====================");
+let add="";
+let a,b;
+let  p=()=>{
+   return  add=(a+b)*2;
+ 
+}  
+p();
+console.log(object);
 
