@@ -17,7 +17,7 @@ const images=[ {src:"https://images.unsplash.com/photo-1479090793912-eb9929f4fdb
         img.setAttribute("src", image.src)
         img.setAttribute("class", "hi")// class name ugch bg;  eswel  img.className("hr")
       
-        img.style = "width:200px;height:200px";
+        img.style = "width:200px;height:200px; margin:10px; display:flex flex-direction:row"
 
       
         div.appendChild(img);
