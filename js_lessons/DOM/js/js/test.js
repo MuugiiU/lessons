@@ -26,3 +26,24 @@
 // console.log(sum);
 //  pascaliin gurvaljin
 
+// const body=document.getElementsByTagName("body")[0];
+// const div=document.createElement("div");
+// body.appendChild(div);
+// const h1=document.createElement("h1");
+// div.appendChild(h1);
+// h1.innerHTML="Hello World";
+// h1.style="color:blue; font-size:2rem; heigth:100px width:100px";
+
+// let list =["Бат","Дорж", "Пунцаг","Готов","Баяраа", "Болд",  "Гончигсумлай","Нэргүй", "Бальбийгомбо", "Баатар" ];
+// let addlist =list.push("tsetsgee");
+// let addlist1=addlist.push("navchaa");
+//  let a=addlist1.splice(6,1);
+//  let b=a.pop();
+//  console.log(b);
+let body= document.getElementsByTagName("body")[0];
+let div= document.createElement("div");
+body.appendChild(div);
+let h1 = document.createElement("h1");
+div.appendChild(h1);
+h1.innerHTML = "hello"
+h1.style.color="red"

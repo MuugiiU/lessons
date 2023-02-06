@@ -1,16 +1,5 @@
-let n=5;
-console.log("n=",n);
- let q=[]; 
-for (let i=0; i<n; i++ ){
+let array=[4,2,34,4,1,12,1,4];
+let ar=[];
+for(let i=0; i<=array.length;i++){
     
-       q.push (i);
-      console.log(q);
 }
-for (let i=n; i>0; i-- ){
-    console.log(q);
-    q.pop(i);
-   
-}
-//  for (let j=;j<=n-1;j++ ){
-    
-//  }
