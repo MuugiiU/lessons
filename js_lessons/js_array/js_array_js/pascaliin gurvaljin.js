@@ -10,4 +10,4 @@ let n = parseInt(prompt("pascaliin gurvaljin uusgeh toogoo oruulna uu"));
     }
     triangle.push(a);
     console.log(a);
- }
+}

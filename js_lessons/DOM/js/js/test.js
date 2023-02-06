@@ -40,10 +40,20 @@
 //  let a=addlist1.splice(6,1);
 //  let b=a.pop();
 //  console.log(b);
-let body= document.getElementsByTagName("body")[0];
-let div= document.createElement("div");
-body.appendChild(div);
-let h1 = document.createElement("h1");
-div.appendChild(h1);
-h1.innerHTML = "hello"
-h1.style.color="red"
+// let body= document.getElementsByTagName("body")[0];
+// let div= document.createElement("div");
+// body.appendChild(div);
+// let h1 = document.createElement("h1");
+// div.appendChild(h1);
+// h1.innerHTML = "hello"
+// h1.style.color="red"
+
+ let find =[];
+ let max;
+ for(let i=0; i<=100; i++){
+    if(i%7===0 && i%6===0){
+        find.push(i);
+        max=Math.max(...find)
+    }
+ }
+ console.log(max);
