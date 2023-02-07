@@ -5,7 +5,8 @@ let num =prompt("ta dugaaraa oruulna uu");
 
 
  let length=num.length;
-  if (count=='+'&& uls=="976"&&length===12) {
+  if (count=='+'|| uls=="976"
+  ||length===12) {
 
         console.log("mongol ulsiin utasnii dugaariig zuv oruullaa",num);
     } else{
