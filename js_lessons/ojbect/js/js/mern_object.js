@@ -21,7 +21,7 @@ const users = [
         skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
         age: 39,
         isLoggedIn: true,
-        points: 50
+        points: 60
       },
     {
         name:   'Daniel',
@@ -37,7 +37,7 @@ const users = [
         skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
         age: 20,
         isLoggedIn: true,
-        points: 50
+        points: 55
       },
     {
         name:   'Thomas',
@@ -61,15 +61,33 @@ const users = [
 
     console.table(users[0]);
     console.log("==========n-2==============");
-   let arr1 = [];
-  for(let i=0 ; i<users.length ; i++){
-    arr1.push(users[i].skills)
-  //   if(users[i].skills<skills.length) {
-  //      console.log(skills);
-  //   }
+const skill_user=()=>{
+  let max_skills =0;
+  
+   for (let i=0; i<users.length;i++){
+    if(users[i].skills.length>max_skills){
+      max_skills=users[i].skills.length;
+    }
+    console.log(`Хамгийн их ур чадвартай хүн,${max_skills}`)
   }
-  console.log(arr1)
-  // console.log(users[2].skills);
+}
+const point=()=>{  
+  let max_point=0;
+   for(let i=0;i<users.length;i++){
+    if(users[i].points>=50){
+     max_point=users[i].points
+    
+    }
+    console.log(`Хамгийн их оноотой хүн,${max_point}`);
+  }
+}
+skill_user();
+point();
+
+const mern=()=>{
+ 
+}
+mern();
 
 
 

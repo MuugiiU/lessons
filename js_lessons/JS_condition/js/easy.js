@@ -91,18 +91,18 @@ let undur=prompt("Та биеийн өндрөө оруулна уу");
 
 const bmi = jin/((undur/100)**2)
 
- if(bmi<=18.5){
+ if(bmi<18.5){
     console.log("Та туранхай байна")
  }
-  else if(bmi>=18.5 || bmi<=25){
+  else if(bmi<=25){
     console.log("Та хэвийн жинтэй байна")
  }
  
-  else if(bmi>=25.5 || bmi<=29.5){
+  else if(bmi<=29.5){
     console.log("Та илүүдэл жинтэй байна")
  }
   
-  else if(bmi>=30 || bmi<=40){
+  else if(bmi<=40){
     console.log("Та  хэт таргалалттай байна")
  }
  else {
