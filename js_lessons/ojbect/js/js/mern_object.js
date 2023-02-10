@@ -85,7 +85,11 @@ skill_user();
 point();
 
 const mern=()=>{
- 
+ let skill_user=0;
+  for(let i=0;i<=users.length;i++){
+    skill_user=users.skills[i];
+    console.log(skills_users)
+  }
 }
 mern();
 
